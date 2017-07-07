@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css.css">
+        <meta charset="UTF-8">
+        <title>Chat APS</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+
+
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+      
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+
+    <body background="imagens/fundo.jpg">
+
+<div class="nome_container" id="nick" >
+    <img src="imagens/logo_aps.png" width="200" id="imagem_logo">
+    <span align="center">INFORME SEU NOME: </span>
+    <form id="submit"><input type="text" id="nome">
+    <button id="botao_entrar" onclick="entra" >ENTRAR</button></form>
+
+</div>
+   
+        <div class="upage-outer" id="chat" hidden>
+            <div class="uib-header container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0" id="topo">
+                <h2></h2>
+                <div class="widget-container wrapping-col single-centered"></div>
+                <div class="widget-container content-area horiz-area wrapping-col left">
+                    <div class="tarea widget uib_w_6" data-uib="media/text" data-ver="0" name="uib_w_6" id="txt_usu_nome">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p id="nome_e">USUÁRIO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-container content-area horiz-area wrapping-col right">
+                    <div class="tarea widget uib_w_7 d-margins" data-uib="media/text" data-ver="0" name="uib_w_7" id="txt_acesso">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p id="acesso">Conectado às 00:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upage-content ac0 content-area vertical-col left" id="page_71_65" onload="scroll();">
+
+                <ol class="chat">
+                </ol>
+
+            </div>
+            <div class="uib-footer uib-footer-fixed container-group inner-element uib_w_2 background" data-uib="layout/footer" data-ver="0" id="rodape">
+
+                <div class="widget-container wrapping-col ">
+                    <div class="table-thing widget uib_w_3" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <input class="wide-control form-control  input-lg left" type="text" placeholder="Mensagem..." id="txtMensagem" >
+
+                    </div>
+
+                    <div class="widget-container content-area horiz-area wrapping-col right">
+                        <button class="btn widget uib_w_4 btn-lg btn-link" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEnviar" ><i class="glyphicon glyphicon-ok button-icon-top" data-position="top"></i> 
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+        <script src="assets/js.js"></script>
+
+    </body>
+
+</html>
